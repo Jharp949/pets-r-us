@@ -11,8 +11,16 @@ app.use('/styles', express.static(__dirname + 'public/styles'))
 app.use('/images', express.static(__dirname + 'public/images'))
 app.use('/js', express.static(__dirname + 'public/js'))
 
+//Set views
+app.set('views', './views')
+app.set('view engine', 'ejs')
+//index page
 app.get('', (req, res) => {
-    res.sendFile(__dirname + '/views/index.ejs')
+    res.render('index')
+})
+//grooming page
+app.get('/grooming', (req, res) => {
+    res.render('grooming')
 })
 
 //Listen on port 300

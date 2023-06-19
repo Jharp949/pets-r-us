@@ -1,3 +1,89 @@
-body {
-    color:blue;
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcfc;
+}
+
+li, a ,button {
+    font-family: "Signika", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fcfcfc;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #19d1ff;
+    border-bottom: 20px solid #fcfcfc;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    background-color: #19d1ff;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+    background-color: #19d1ff;
+}
+
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+    background-color: #19d1ff;
+}
+
+.nav-links li a:hover {
+    color: rgb(247, 141, 4);
+    background-color: #19d1ff;
+}
+
+.cta {
+    background-color: #19d1ff;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgb(247, 141, 4);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(247, 141, 4, 0.8);
+}
+
+#splash-bkgrd {
+    background-image: url(/images/cat-dog.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 900px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+#pg-title {
+    background: none;
+    text-align: center;
+    color: #fcfcfc;
+    font-size: 120px;
+    grid-column: 2;
+    grid-row: 2;
 }

@@ -1,69 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;700&display=swap');
+@import "form.css";
+@import "nav.css";
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     background-color: #fcfcfc;
-}
-
-li, a ,button {
-    font-family: "Signika", sans-serif;
     font-weight: 400;
     font-size: 20px;
-    color: #fcfcfc;
-    text-decoration: none;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-    background-color: #19d1ff;
-    border-bottom: 20px solid #fcfcfc;
-}
-
-.logo {
-    cursor: pointer;
-}
-
-.nav-links {
-    list-style: none;
-    background-color: #19d1ff;
-}
-
-.nav-links li {
-    display: inline-block;
-    padding: 0 20px;
-    background-color: #19d1ff;
-}
-
-.nav-links li a {
-    transition: all 0.3s ease 0s;
-    background-color: #19d1ff;
-}
-
-.nav-links li a:hover {
-    color: rgb(247, 141, 4);
-    background-color: #19d1ff;
-}
-
-.cta {
-    background-color: #19d1ff;
-}
-
-button {
-    padding: 9px 25px;
-    background-color: rgb(247, 141, 4);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-button:hover {
-    background-color: rgba(247, 141, 4, 0.8);
 }
 
 #splash-bkgrd {
@@ -79,11 +24,41 @@ button:hover {
     grid-row-gap: 0px;
 }
 
-#pg-title {
+#splash-title {
     background: none;
     text-align: center;
     color: #fcfcfc;
     font-size: 120px;
     grid-column: 2;
     grid-row: 2;
+}
+
+.pg-title {
+    text-align: center;
+    color: #000;
+    font-size: 120px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 4em;
+}
+
+h3 {
+    text-align: center;
+    font-size: 3em;
+}
+
+#locations ol {
+    text-align: center;
+    border: 1px solid black;
+}
+
+#dog {
+    width: 25%;
+    height: 25%;
+}
+
+#testimonials {
+    text-align: center;
 }

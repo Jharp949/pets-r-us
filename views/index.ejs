@@ -17,42 +17,56 @@
         <a class="cta" href="#"><button>Contact</button></a>
     </header>
     <div id="splash-bkgrd">
-        <h1 id="pg-title">Pets-R-Us</h1>
+        <h1 id="splash-title">Pets-R-Us</h1>
     </div>
     <div class="container">
         <div id="locations">
             <h2>Locations</h2>
             <ol>
-                <li>Chicago</li>
-                <li>Los Angeles</li>
-                <li>Tampa Bay</li>
-                <li>Seattle</li>
-                <li>Austin</li>
+                <li>Chicago - 9am to 8pm</li>
+                <li>Los Angeles - 10am to 9pm</li>
+                <li>Tampa Bay - 9am to 7:30pm</li>
+                <li>Seattle - 9am to 6:30pm</li>
+                <li>Austin - 10am to 9pm</li>
             </ol>
         </div>
-        <div id="loc-hours">
-
-        </div>
         <div id="dog-of-week">
-
+            <h2>Dog of the Week</h2>
+            <img src="/images/dog-of-week.jpg" id="dog">
         </div>
         <div id="testimonials">
-
+            <h2>Testimonials</h2>
+            <ol>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+                <li>Four</li>
+                <li>Five</li>
+            </ol>
         </div>
         <div id="contact">
-            <form>
-                <div class="fieldName">
-                    <label for="name" class="label">Your name</label>
-                    <div class="input-name">
-                        <input type="text" id="name" name="name" required>
+            <h3>Contact Us</h3>
+            <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+                <div class="fcf-form-group">
+                    <label for="Name" class="fcf-label">Your name</label>
+                    <div class="fcf-input-group">
+                        <input type="text" id="Name" name="Name" class="fcf-form-control" required>
                     </div>
                 </div>
-        
-                <div class="fieldEmail">
-                    <label for="email" class="label">Your email address</label>
-                    <div class="input-email">
-                        <input type="email" id="email" name="email" required>
+                <div class="fcf-form-group">
+                    <label for="Email" class="fcf-label">Your email address</label>
+                    <div class="fcf-input-group">
+                        <input type="email" id="Email" name="Email" class="fcf-form-control" required>
                     </div>
+                </div>
+                <div class="fcf-form-group">
+                    <label for="Message" class="fcf-label">Your message</label>
+                    <div class="fcf-input-group">
+                        <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                    </div>
+                </div>
+                <div class="fcf-form-group">
+                    <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
                 </div>
             </form>
         </div>

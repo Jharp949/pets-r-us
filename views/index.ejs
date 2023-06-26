@@ -8,13 +8,7 @@
 </head>
 <body>
     <header>
-        <a href="/"><img class="logo" src="images/logo-48px.png" alt="logo"></a>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="/grooming">Grooming</a></li>
-            </ul>
-        </nav>
-        <a class="cta" href="#"><button>Contact</button></a>
+        <%- include('./layouts/_header') %>
     </header>
     <div id="splash-bkgrd">
         <h1 id="splash-title">Pets-R-Us</h1>
@@ -71,5 +65,8 @@
             </form>
         </div>
     </div>
+    <footer>
+        <%- include('./layouts/_footer') %>
+    </footer>
 </body>
 </html>

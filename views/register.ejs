@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/site.css">
+
+    <title>Pets-R-Us Registration</title>
+</head>
+
+<body>
+    <header>
+        <%- include('./layouts/_header') %>
+    </header>
+
+    <h1>Registration Form</h1>
+    <div class="register">
+    <form action="/register" method="POST">
+      <div>
+        <label for="customerId">Customer ID:</label>
+        <input type="text" id="customerId" name="customerId" required>
+      </div>
+    
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+    
+      <button type="submit">Register</button>
+    </form>
+    </div>
+
+    <footer>
+        <%- include('./layouts/_footer') %>
+    </footer>
+
+</body>
+</html>

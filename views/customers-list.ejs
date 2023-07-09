@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Grooming</title>
+    <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+    <header>
+        <%- include('./layouts/_header') %>
+    </header>
+    
+    <div class="usertable">
+        <ul>
+        <!-- displays customer information -->
+            <% customers.forEach(customer => { %>
+            <li>
+                <p><b>Username:</b> <%= customer.customerId %></p>
+                <p><b>Email:</b> <%= customer.email %></p>
+            </li>
+            <% }) %>
+        </ul>
+    </div>
+
+    <footer>
+        <%- include('./layouts/_footer') %>
+    </footer>
+</body>
+</html>

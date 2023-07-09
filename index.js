@@ -53,6 +53,10 @@ app.get('/training', (req, res) => {
 app.get('/register', (req, res) => {
     res.render('register');
   });
+
+  app.get('/customer-list', (req, res) => {
+    res.render('customers');
+  });
   
   app.post('/register', (req, res) => {
     const { customerId, email } = req.body;

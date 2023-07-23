@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/site.css">
+
+    <title>Pets-R-Us Appointments</title>
+</head>
+<body>
+
+    <header>
+        <%- include('./layouts/_header') %>
+    </header>
+<hr>
+
+<h1>My Appointments</h1>
+
+<form id="lookup-form" class="register">
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <br>
+  <button type="submit">Look Up</button>
+</form>
+
+<div id="appointments">
+
+</div>
+
+<script src="/js/my-appointments.js"></script>
+
+    <footer>
+        <%- include('./layouts/_footer') %>
+    </footer>
+
+</body>
+</html>

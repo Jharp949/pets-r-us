@@ -58,6 +58,10 @@ app.get('/register', (req, res) => {
 app.get('/customer-list', (req, res) => {
   res.render('customers');
 });
+
+app.get('/appointments', (req, res) => {
+  res.render('appointments');
+});
   
 app.post('/register', (req, res) => {
   const { customerId, email } = req.body;
@@ -79,6 +83,31 @@ app.get('/booking', (req, res) => {
   const services = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'public/data/services.json'), 'utf8'));
     
   res.render('booking', { services });
+});
+
+app.get('/api/appointments/:email', async (req, res) => {
+  try {
+    const appointments = await Appointment.find({ email: req.params.email });
+    res.json(appointments);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+app.post('/appointments', (req, res) => {
+  const { userName, firstName, lastName, email, service } = req.body;
+
+  const newAppointment = new Appointment({ userName, firstName, lastName, email, service });
+
+  newAppointment.save()
+    .then(() => {
+      res.redirect('/');
+    })
+    .catch(error => {
+      console.log(error);
+      res.status(500).send('Error registering appointment.');
+    });
 });
 
 //Listen on port 3000
